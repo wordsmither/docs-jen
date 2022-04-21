@@ -4,7 +4,7 @@ subtitle: Advanced Global CDN
 description: Edge configuration tools that enable advanced site management, enhanced security, and a customizable WAF
 categories: [performance]
 tags: [cdn, security, professional-services]
-reviewed: "2021-10-07"
+reviewed: "2022-04-19"
 layout: guide
 showtoc: true
 permalink: docs/guides/professional-services/advanced-global-cdn
@@ -75,29 +75,7 @@ Reduce requests to your CMS by moving page redirects to the edge. We can do path
 
 Support for blue/green deployment<Popover title="Blue/Green Deployment" content="With a blue/green deployment strategy, the new version of your application is released alongside the current version. After you conduct appropriate tests, traffic is switched to the new version." /> CI/CD processes that enable continuous testing and deployment workflows and always ready disaster recovery.
 
-## Rate Limiting (Early Access)
-
-Rate Limiting, a feature of Advanced Global CDN, lets you place limits on request volume at the network perimeter. Organizations of all sizes can adopt this edge configuration to block malicious traffic. Rate Limiting can be configured to guard critical assets including login, form, and promotional pages by adding another layer of security to your site.
-
-The benefits of Rate Limiting include:
-
-- Volumetric Attack Mitigation - Reduce the effectiveness of malicious traffic, including brute-force login and denial-of-service attacks.
-
-- Policy-based Control - Rate Limiting supports adjustable configurations for your policy, including requests per second, and detection window.
-
-- Custom Responses - Select from actions that allow you to block requests or log them, and configure custom responses for your policy.
-
-<Alert title="Note"  type="info" >
-
-This feature is currently in Early Access; for more information, reach out to your account manager.
-
-</Alert>
-
-### Additional Features from WAF/IO
-
-- Efficient <abbr title="Image Optimization">IO</abbr> at the edge
-
-  With **Image Optimization (IO)** images render quickly from the edge offloading work from your servers and adding resilience to your site. IO supports a number of formats including animated GIFs.
+### Additional Features from WAF
 
 - Layer 7/Enterprise WAF rules
 
@@ -123,19 +101,6 @@ This feature is currently in Early Access; for more information, reach out to yo
 
 [See a comparison of the features](https://pantheon.io/product/advanced-global-cdn#pricing-matrix-wrapper) offered by our CDN services.
 
-<<<<<<< HEAD
-### Rate Limiting
-
-Rate Limiting with Advanced Global CDN lets you place limits on request volume at the network perimeter. Organizations of all sizes can adopt this edge configuration to block malicious traffic. With Rate Limiting, guard critical assets including login, form, and promotional pages, with an added layer of security.
-
-The benefits of this feature include:
-
-- Volumetric Attack Mitigation - Reduce the effectiveness of malicious traffic, including brute-force login and denial-of-service attacks.
-
-- Granular Control - Rate Limiting supports adjustable configurations that can be adjusted on a per policy basis, including requests per second, and detection window.
-
-- Custom Responses - Select from actions that allow you to block requests or log them, and configure custom responses for each policy.
-=======
 ### Rate Limiting (Early Access)
 
 Rate Limiting, a feature of Advanced Global CDN, lets you place limits on request volume at the network perimeter. Organizations of all sizes can adopt this edge configuration to block malicious traffic. Rate Limiting can be configured to guard critical assets including login, form, and promotional pages by adding another layer of security to your site.
@@ -153,7 +118,16 @@ The benefits of Rate Limiting include:
 This feature is currently in Early Access; for more information, reach out to your account manager.
 
 </Alert>
->>>>>>> 6846106527abaddc739d09699ae9e7e274f6c1b1
+
+### Fastly on Pantheon
+
+Pantheon's partnership with [Fastly](https://www.fastly.com/) offers many benefits to our customers, including:
+
+- **Enhanced Caching** at the edge, including API responses. This allows you to see traffic and deployment changes, and improves continuous integration / continuous delivery (CI/CD).
+
+- **Image Optimizer (IO)** is an add-on that renders images using high-density points of presence (POPs) that cache content for longer times and serve millions of image variations. Serving from the edge in this way offloads work from your servers and improves your site's performance. IO supports several formats including animated GIFs.
+
+You can test your Fastly caching features by [confirming that your experience protection works](/global-cdn#confirm-that-experience-protection-works).
 
 ## Frequently Asked Questions
 
