@@ -44,6 +44,8 @@ The steps in this process migrate a site, so the new site will no longer maintai
 
 </Alert>
 
+The steps in this guide could also be performed using the [Conversion Tools Terminus Plugin](https://packagist.org/packages/pantheon-systems/terminus-conversion-tools-plugin). Install the plugin [as usual](https://pantheon.io/docs/terminus/plugins#terminus-3) and then run `terminus conversion:advise <site>.<env>` and follow the printed advise.
+
 ## Prepare the Local Environment
 
 <Partial file="drupal-9/prepare-local-environment-no-clone.md" />
