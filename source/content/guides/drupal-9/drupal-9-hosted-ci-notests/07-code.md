@@ -7,9 +7,9 @@ categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
-permalink: docs/guides/drupal-9-hosted/code
+permalink: docs/guides/drupal-9-hosted-ci-notests/code
 anchorid: code
-editpath: drupal-9/drupal-9-hosted/07-code.md
+editpath: drupal-9/drupal-9-hosted-ci-notests/07-code.md
 reviewed: "2021-03-31"
 ---
 

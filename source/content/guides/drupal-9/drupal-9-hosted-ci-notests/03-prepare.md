@@ -7,9 +7,9 @@ categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
-permalink: docs/guides/drupal-9-hosted/prepare
+permalink: docs/guides/drupal-9-hosted-ci-notests/prepare
 anchorid: prepare
-editpath: hdrupal-9/drupal-9-hosted/03-prepare.md
+editpath: drupal-9/drupal-9-hosted-ci-notests/03-prepare.md
 reviewed: "2021-03-31"
 ---
 
