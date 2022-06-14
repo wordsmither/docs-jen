@@ -28,7 +28,7 @@ class Glossary extends React.Component {
 
     docsWithDefLists.edges.map(({ node }) => {
       const matches = node.rawBody.match(
-        /<dt>(.+?)<\/dt>\n\n\s*<dd>\n\n(.+?)\n\n\s*<\/dd>/gim
+        /<dt>(.*?)<\/dt>\n\n\s*<dd>\n\n(.*?)\n\n\s*<\/dd>/gim
       )
       //console.log("Match Title: ", node.frontmatter.title) // For Debugging
       //console.log("match: ", matches) // For Debugging
@@ -59,21 +59,21 @@ class Glossary extends React.Component {
     docsWithDFNs.edges.map(({ node }) => {
       //console.log("rawBody: ", node.rawBody) //For Debugging
       const isDfn = node.rawBody.match(
-        /\n.+?<dfn id="(.+?)">(.+?)<\/dfn>.+?\n/g
+        /\n.*?<dfn id="(.*?)">(.*?)<\/dfn>.*?\n/g
       )
       //console.log("isDfn", isDfn) //For Debugging
       if (isDfn && isDfn.length) {
         isDfn.forEach(def => {
           //console.log("slug: ", node.fields.slug, "slice: ", node.fields.slug.slice(0, 1)),
           allDfns.push({
-            title: def.match(/\n.+?<dfn id="(.+?)">(.+?)<\/dfn>.+?\n/)[2],
+            title: def.match(/\n.*?<dfn id="(.*?)">(.*?)<\/dfn>.*?\n/)[2],
             from: node.frontmatter.title,
             slug: node.fields.slug.slice(0, 1) === "/" ? node.fields.slug.slice(1) : node.fields.slug,
             definition: def,
             letter: def
-              .match(/\n.+?<dfn id="(.+?)">(.+?)<\/dfn>.+?\n/)[1][0]
+              .match(/\n.*?<dfn id="(.*?)">(.*?)<\/dfn>.*?\n/)[1][0]
               .toUpperCase(),
-            id: def.match(/\n.+?<dfn id="(.+?)">(.+?)<\/dfn>.+?\n/)[1],
+            id: def.match(/\n.*?<dfn id="(.*?)">(.*?)<\/dfn>.*?\n/)[1],
           })
         })
       }
@@ -176,7 +176,7 @@ class Glossary extends React.Component {
                               </Link>
                               <div
                                 dangerouslySetInnerHTML={{
-                                  __html: converter.makeHtml(definition).replace(/<a href="\/(.+?)">/g, "<a href=/docs/$1>")
+                                  __html: converter.makeHtml(definition).replace(/<a href="\/(.*?)">/g, "<a href=/docs/$1>")
                                 }}
                               />
                               {from.length > 0 ? (
