@@ -1,17 +1,22 @@
 ---
-title: Terminus Guide
+title: Terminus Manual
 subtitle: Plugin Directory
-description: A non-exclusive directory of plugins to extend Terminus features.
-layout: guide
+description: A non-exclusive directory of plugins to extend the features of Terminus.
+terminuspage: true
+type: terminuspage
+layout: terminuspage
 categories: [develop]
-tags: [reference, cli, local, terminus, workflow]
-permalink: docs/guides/terminus/directory
-anchorid: directory
+tags: [cli, local, plugins, terminus, workflow]
+nexturl: terminus/plugins/create/
+previousurl: terminus/plugins/
+permalink: docs/terminus/plugins/:basename
+image: terminus-thumbLarge
+searchboost: 100
 ---
 
-You can extend Terminus functionality and add commands by installing [third-party plugins](https://github.com/terminus-plugin-project) or by [creating your own plugins](/guides/terminus/create).
+Extend the functionality of Terminus and add commands by installing <a href="https://github.com/terminus-plugin-project">third party plugins</a> or <a href="https://pantheon.io/docs/terminus/plugins/create">create your own</a>.
 
-The list below provides a small sample of popular plugins available for Terminus 1.x:
+The following plugins are just a few of the most popular available for Terminus 1.x:
 
 <CardGroup>
 
@@ -47,7 +52,7 @@ Apply upstream updates to a list of sites.
 
   <Card title={"New Relic"} isOfficial author={"Paul Jebulan de Paula"} authorLink={"https://github.com/fusionx1"} link={"https://github.com/pantheon-systems/terminus-newrelic-data-plugin"}>
 
-Fetch metric data from the New Relic API.
+Fetches metric data from the New Relic API.
 
   </Card>
 
@@ -65,32 +70,26 @@ Install [Quicksilver](/guides/quicksilver) webhooks from the [Quicksilver exampl
 
   <Card title={"Rsync"} isOfficial author={"Greg Anderson"} authorLink={"https://github.com/greg-1-anderson"} link={"https://github.com/pantheon-systems/terminus-rsync-plugin"}>
 
-Copy files to and from a Pantheon site.
+Quickly copy files to and from a Pantheon site.
 
   </Card>
 
   <Card title={"Secrets"} isOfficial author={"Greg Anderson"} authorLink={"https://github.com/greg-1-anderson"} link={"https://github.com/pantheon-systems/terminus-secrets-plugin"}>
 
-Manage the `secrets.json` file for use with Quicksilver.
+Manage the <code>secrets.json</code> file for use with Quicksilver.
 
   </Card>
 
   <Card title={"Site Clone"} isOfficial author={"Andrew Taylor"} authorLink={"https://pantheon.io/team/andrew-taylor"} link={"https://github.com/pantheon-systems/terminus-site-clone-plugin"}>
 
-Copy the code, database, and files from one Pantheon Site Dashboard to another.
+Copy the code, database and files from one Pantheon Site Dashboard to another.
 
   </Card>
 
   <Card title={"Site Status"} author={"Ed Reel"} authorLink={"https://github.com/uberhacker"} link={"https://github.com/terminus-plugin-project/terminus-site-status-plugin"}>
 
-Display the status of all available Pantheon site environments.
+Displays the status of all available Pantheon site environments.
 
   </Card>
 
 </CardGroup>
-
-
-## More Resources
-
-- [Quicksilver on Pantheon](/quicksilver)
-- [MariaDB and MySQL on Pantheon](/guides/mariadb-mysql)
